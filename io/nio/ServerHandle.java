@@ -1,5 +1,7 @@
 package demo.io.nio;
 
+import demo.utils.Calculator;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -115,8 +117,8 @@ public class ServerHandle implements Runnable{
                     //处理数据
                     String result = null;
                     try{
-//                        result = Calculator.cal(expression).toString();
-                        result=expression;
+                        result = Calculator.cal(expression).toString();
+//                        result=expression;
                     }catch(Exception e){
                         result = "计算错误：" + e.getMessage();
                     }

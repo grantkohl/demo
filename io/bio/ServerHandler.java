@@ -1,5 +1,7 @@
 package demo.io.bio;
 
+import demo.utils.Calculator;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,8 +29,8 @@ public class ServerHandler implements Runnable{
                 if((expression = in.readLine())==null) break;
                 System.out.println("服务器收到消息：" + expression);
                 try{
-//                    result = Calculator.cal(expression).toString();
-                    result=expression;
+                    result = Calculator.cal(expression).toString();
+//                    result=expression;
                 }catch(Exception e){
                     result = "计算错误：" + e.getMessage();
                 }
